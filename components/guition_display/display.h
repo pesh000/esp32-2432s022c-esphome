@@ -6,7 +6,7 @@
 namespace esphome {
 namespace guition_display {
 
-class GuitionDisplay : public PollingComponent, public display::DisplayBuffer {
+class GuitionDisplay : public PollingComponent, public display::Display {
  public:
   void setup() override;
   void update() override;
