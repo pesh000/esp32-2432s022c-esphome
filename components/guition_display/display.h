@@ -1,18 +1,18 @@
 #pragma once
 
 #include "esphome/core/component.h"
-#include "esphome/components/display/display_buffer.h"
+#include <LovyanGFX.hpp>
 
 namespace esphome {
 namespace guition_display {
 
-class GuitionDisplay : public PollingComponent, public display::Display {
+class GuitionDisplay : public PollingComponent {
  public:
   void setup() override;
   void update() override;
 
  protected:
-  void draw_display(display::DisplayBuffer *display) override;
+  LGFX tft;
 };
 
 }  // namespace guition_display
