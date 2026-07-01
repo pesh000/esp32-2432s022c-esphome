@@ -11,7 +11,7 @@ guition_ns = cg.esphome_ns.namespace("guition_display")
 
 GuitionDisplay = guition_ns.class_(
     "GuitionDisplay",
-    cg.PollingComponent,
+    cg.Component,
     display.DisplayBuffer,
 )
 
@@ -21,7 +21,7 @@ CONFIG_SCHEMA = (
             cv.GenerateID(): cv.declare_id(GuitionDisplay),
         }
     )
-    .extend(cv.polling_component_schema("500ms"))
+    .extend(cv.component_schema)
 )
 
 
