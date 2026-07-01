@@ -80,5 +80,9 @@ void GuitionDisplay::draw_display(display::DisplayBuffer *display) {
   tft.drawString("UPDATE", 10, 40);
 }
 
+void GuitionDisplay::draw_absolute_pixel_internal(int x, int y, Color color) {
+  // placeholder - ще го свържем към LovyanGFX framebuffer
+}
+
 }  // namespace guition_display
 }  // namespace esphome
